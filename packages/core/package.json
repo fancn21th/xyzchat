@@ -1,10 +1,9 @@
 {
-  "name": "core",
+  "name": "@repo/core",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -33,6 +32,21 @@
     "postcss": "8.4.38",
     "tailwindcss": "3.4.3",
     "typescript": "^5.2.2",
-    "vite": "^5.2.0"
-  }
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "3.9.1",
+    "vite-plugin-lib-inject-css": "2.1.1"
+  },
+  "module": "./dist/core.js",
+  "main": "./dist/core.cjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/core.js",
+      "require": "./dist/core.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ]
 }
