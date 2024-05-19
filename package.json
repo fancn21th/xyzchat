@@ -1,5 +1,5 @@
 {
-  "name": "wchat",
+  "name": "xyzchat",
   "private": true,
   "scripts": {
     "build": "turbo build",
