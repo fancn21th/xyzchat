@@ -1,5 +1,5 @@
 {
-  "name": "demo",
+  "name": "wchat",
   "private": true,
   "scripts": {
     "build": "turbo build",
