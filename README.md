@@ -1,4 +1,4 @@
-# common
+# xyzchat 项目
 
 ## 项目目标
 
