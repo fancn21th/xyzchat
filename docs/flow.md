@@ -32,9 +32,37 @@ In frontend word or more specifically in React word, the source of truth is the 
 | [chatbot-ui](https://github.com/mckaywrigley/chatbot-ui)       |   context   |  |
 | [ChatGPT-Next-Web](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web)       |  custom hook    | desktop support |
 | [LibreChat](https://github.com/danny-avila/LibreChat)       |    messages tree  | [how to use](https://www.librechat.ai/docs/local/npm) |
+| [Open Webui]()       |     |  |
+| [dify]()       |     |  |
 
 ## Question 3: Standalone components and How they are glued together ?
 
-[anatomy of shadcn-ui](https://manupa.dev/blog/anatomy-of-shadcn-ui)
+## Question 4: Customizable Style ?
 
-## Question 4: Better UX, How?
+According to [anatomy of shadcn-ui](https://manupa.dev/blog/anatomy-of-shadcn-ui), a single component broken down to those parts
+
+- headless
+  - state
+  - behavior
+
+- style
+  - structural
+  - visual
+
+`shadcn-ui` gave us those tools below to customize the style of a component.
+
+- Class Variance Authority(CVA)
+  - a function for defining the variance of a component
+  - return another function applied styles conditionally
+
+- VariantProps
+  - expose the available variants as an Enum on the variants prop
+
+- cn
+  - mix of clsx & twMerge libs
+  - clsx
+    conditionally apply styles
+  - twMerge
+    fix `CSS Cascade affects Tailwind` caveat
+
+On top of above, the most natural way to customize the style is ...
