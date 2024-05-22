@@ -9,11 +9,13 @@
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
-    "@repo/ui": "workspace:*",
+    "@ai-sdk/openai": "0.0.13",
     "@repo/core": "workspace:*",
+    "ai": "3.1.12",
     "next": "^14.1.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zod": "3.23.8"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.1.1",
