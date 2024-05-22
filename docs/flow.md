@@ -1,6 +1,11 @@
 # Flow
 
-## Q1: Goal ?
+> Generally speaking the way how end user use this project comes down to two steps
+>
+> - Step 1: make the app connect to AI model
+> - Step 2: tuning the theme, layout, and style
+
+## Question 1: Goal ?
 
 As a tech pre-sales guy, when I want to present yet another AI application or just a AI chat demo for our customers, I don't want to start from scratch. Picking-up a github project, evaluate and decide. At last couple of hours later the demo is done.
 
@@ -9,7 +14,7 @@ As a tech pre-sales guy, when I want to present yet another AI application or ju
 - So there is an AI app standalone.
 - So there is a monorepo hosts both website and standalone all together
 
-## Q2: Source of truth ?
+## Question 2: Source of truth ? Data (state / behavior | in / out) ?
 
 As a engineer, I ask myself where to start ? The UI or the State / Behavior ? What is the common sense to build a AI app ?
 
@@ -19,7 +24,7 @@ The data returned from server is the single source of truth for an AI app. How m
 
 Still We need an agent to wrap it up and make it become the lower dependency. The agent itself is the real source of truth for the app.
 
-In frontend word or more specifically in React word, the source of truth is the state / behavior. which is commonly encapsulated as hook. Let's see how Open Source community handle it.
+In frontend word or more specifically in React word, the source of truth is the state / behavior. which is commonly encapsulated as hook. Let's see how Open Source community handle it as table below.
 
 | Project              | Data Layer | Comment |
 | :---------------- | :------: | ----: |
@@ -28,4 +33,8 @@ In frontend word or more specifically in React word, the source of truth is the 
 | [ChatGPT-Next-Web](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web)       |  custom hook    | desktop support |
 | [LibreChat](https://github.com/danny-avila/LibreChat)       |    messages tree  | [how to use](https://www.librechat.ai/docs/local/npm) |
 
-## Q3
+## Question 3: Standalone components and How they are glued together ?
+
+[anatomy of shadcn-ui](https://manupa.dev/blog/anatomy-of-shadcn-ui)
+
+## Question 4: Better UX, How?
