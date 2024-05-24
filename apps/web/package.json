@@ -10,8 +10,11 @@
   },
   "dependencies": {
     "@ai-sdk/openai": "0.0.13",
+    "@langchain/community": "0.2.2",
+    "@langchain/openai": "0.0.33",
     "@repo/core": "workspace:*",
     "ai": "3.1.12",
+    "https-proxy-agent": "7.0.4",
     "next": "^14.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
