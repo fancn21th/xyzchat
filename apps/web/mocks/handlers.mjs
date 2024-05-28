@@ -62,6 +62,8 @@ export const handlers = [
     return HttpResponse.json({ firstName: "alex" });
   }),
   http.post("/mock/api/completion", ({ request }) => {
+    console.log("incoming request", request.body);
+
     const chunks = prepareStreamResponse({
       content: ["Hello", ", ", "World!"],
       finish_reason: "stop",
@@ -72,6 +74,7 @@ export const handlers = [
       },
       logprobs: TEST_LOGPROBS,
     });
+
     const encoder = new TextEncoder();
     const stream = new ReadableStream({
       async start(controller) {
@@ -91,9 +94,6 @@ export const handlers = [
         "Content-Type": "text/event-stream",
         "Cache-Control": "no-cache",
         Connection: "keep-alive",
-        responseHeaders: {
-          "test-header": "test-value",
-        },
       },
     });
   }),

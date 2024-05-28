@@ -5,6 +5,9 @@ import { useCompletion } from "ai/react";
 export default function Page() {
   const { completion, input, handleInputChange, handleSubmit } = useCompletion({
     api: "/mock/api/completion",
+    onResponse: (response) => {
+      console.log(response);
+    },
   });
 
   return (
