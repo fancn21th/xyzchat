@@ -6,8 +6,8 @@ module.exports = {
   async rewrites() {
     return [
       {
-        source: "/v2/:path*",
-        destination: `${API_URL}/v1/:path*`,
+        source: "/mock/:path*",
+        destination: `${API_URL}/mock/:path*`,
       },
     ];
   },
