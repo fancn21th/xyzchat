@@ -1,6 +1,5 @@
 // src/mocks/handlers.js
 import { http, HttpResponse } from "msw";
-// import { createClient } from "./mock-client.mjs";
 import { createMockServer } from "./mock-server.mjs";
 import { openaiChatCompletionChunks } from "./openai-chat.mjs";
 import { StreamData, StreamingTextResponse, OpenAIStream } from "ai";
@@ -30,12 +29,6 @@ export const handlers = [
     const response = new StreamingTextResponse(stream, {}, data);
 
     return response;
-
-    // const client = createClient(response);
-
-    // const chunks = await client.readAll();
-
-    // new HttpResponse(chunks.join(""));
   }),
   ...servers,
 ];
