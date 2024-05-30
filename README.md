@@ -1,5 +1,19 @@
 # xyzchat 项目
 
+## How to dev
+
+- terminal 1
+
+```bash
+pnpm dev
+```
+
+- terminal 2 (optional if you want to use mock data)
+
+```bash
+pnpm mock
+```
+
 ## 项目目标
 
 - 当你决定开发一个新的 AI 聊天应用的时候 你就会想到 `xyzchat`
