@@ -1,102 +1,102 @@
 export const openaiChatCompletionChunks = [
   {
-    id: 'chatcmpl-7RyNSW2BXkOQQh7NlBc65j5kX8AjC',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7RyNSW2BXkOQQh7NlBc65j5kX8AjC",
+    object: "chat.completion.chunk",
     created: 1686901302,
-    model: 'gpt-3.5-turbo-0301',
+    model: "gpt-3.5-turbo-0301",
     choices: [
       {
-        delta: { role: 'assistant' },
+        delta: { role: "assistant" },
         index: 0,
         finish_reason: null,
       },
     ],
   },
   {
-    id: 'chatcmpl-7RyNSW2BXkOQQh7NlBc65j5kX8AjC',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7RyNSW2BXkOQQh7NlBc65j5kX8AjC",
+    object: "chat.completion.chunk",
     created: 1686901302,
-    model: 'gpt-3.5-turbo-0301',
+    model: "gpt-3.5-turbo-0301",
     choices: [
       {
-        delta: { content: 'Hello' },
+        delta: { content: "Hello" },
         index: 0,
         finish_reason: null,
       },
     ],
   },
   {
-    id: 'chatcmpl-7RyNSW2BXkOQQh7NlBc65j5kX8AjC',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7RyNSW2BXkOQQh7NlBc65j5kX8AjC",
+    object: "chat.completion.chunk",
     created: 1686901302,
-    model: 'gpt-3.5-turbo-0301',
-    choices: [{ delta: { content: ',' }, index: 0, finish_reason: null }],
+    model: "gpt-3.5-turbo-0301",
+    choices: [{ delta: { content: "," }, index: 0, finish_reason: null }],
   },
   {
-    id: 'chatcmpl-7RyNSW2BXkOQQh7NlBc65j5kX8AjC',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7RyNSW2BXkOQQh7NlBc65j5kX8AjC",
+    object: "chat.completion.chunk",
     created: 1686901302,
-    model: 'gpt-3.5-turbo-0301',
+    model: "gpt-3.5-turbo-0301",
     choices: [
       {
-        delta: { content: ' world' },
+        delta: { content: " xyzChat!" },
         index: 0,
         finish_reason: null,
       },
     ],
   },
   {
-    id: 'chatcmpl-7RyNSW2BXkOQQh7NlBc65j5kX8AjC',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7RyNSW2BXkOQQh7NlBc65j5kX8AjC",
+    object: "chat.completion.chunk",
     created: 1686901302,
-    model: 'gpt-3.5-turbo-0301',
-    choices: [{ delta: { content: '.' }, index: 0, finish_reason: null }],
+    model: "gpt-3.5-turbo-0301",
+    choices: [{ delta: { content: "." }, index: 0, finish_reason: null }],
   },
   {
-    id: 'chatcmpl-7RyNSW2BXkOQQh7NlBc65j5kX8AjC',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7RyNSW2BXkOQQh7NlBc65j5kX8AjC",
+    object: "chat.completion.chunk",
     created: 1686901302,
-    model: 'gpt-3.5-turbo-0301',
-    choices: [{ delta: {}, index: 0, finish_reason: 'stop' }],
+    model: "gpt-3.5-turbo-0301",
+    choices: [{ delta: {}, index: 0, finish_reason: "stop" }],
   },
 ];
 
 export const chatCompletionChunksWithFunctionCall = [
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
+    model: "gpt-3.5-turbo-0613",
     choices: [
       {
         index: 0,
         delta: {
-          role: 'assistant',
+          role: "assistant",
           content: null,
-          function_call: { name: 'get_current_weather', arguments: '' },
+          function_call: { name: "get_current_weather", arguments: "" },
         },
         finish_reason: null,
       },
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
+    model: "gpt-3.5-turbo-0613",
     choices: [
       {
         index: 0,
-        delta: { function_call: { arguments: '{\n' } },
+        delta: { function_call: { arguments: "{\n" } },
         finish_reason: null,
       },
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
+    model: "gpt-3.5-turbo-0613",
     choices: [
       {
         index: 0,
@@ -106,23 +106,23 @@ export const chatCompletionChunksWithFunctionCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
+    model: "gpt-3.5-turbo-0613",
     choices: [
       {
         index: 0,
-        delta: { function_call: { arguments: 'location' } },
+        delta: { function_call: { arguments: "location" } },
         finish_reason: null,
       },
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
+    model: "gpt-3.5-turbo-0613",
     choices: [
       {
         index: 0,
@@ -132,10 +132,10 @@ export const chatCompletionChunksWithFunctionCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
+    model: "gpt-3.5-turbo-0613",
     choices: [
       {
         index: 0,
@@ -145,75 +145,75 @@ export const chatCompletionChunksWithFunctionCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
+    model: "gpt-3.5-turbo-0613",
     choices: [
       {
         index: 0,
-        delta: { function_call: { arguments: 'Char' } },
+        delta: { function_call: { arguments: "Char" } },
         finish_reason: null,
       },
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
+    model: "gpt-3.5-turbo-0613",
     choices: [
       {
         index: 0,
-        delta: { function_call: { arguments: 'l' } },
+        delta: { function_call: { arguments: "l" } },
         finish_reason: null,
       },
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
+    model: "gpt-3.5-turbo-0613",
     choices: [
       {
         index: 0,
-        delta: { function_call: { arguments: 'ottesville' } },
+        delta: { function_call: { arguments: "ottesville" } },
         finish_reason: null,
       },
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
+    model: "gpt-3.5-turbo-0613",
     choices: [
       {
         index: 0,
-        delta: { function_call: { arguments: ',' } },
+        delta: { function_call: { arguments: "," } },
         finish_reason: null,
       },
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
+    model: "gpt-3.5-turbo-0613",
     choices: [
       {
         index: 0,
-        delta: { function_call: { arguments: ' Virginia' } },
+        delta: { function_call: { arguments: " Virginia" } },
         finish_reason: null,
       },
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
+    model: "gpt-3.5-turbo-0613",
     choices: [
       {
         index: 0,
@@ -223,10 +223,10 @@ export const chatCompletionChunksWithFunctionCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
+    model: "gpt-3.5-turbo-0613",
     choices: [
       {
         index: 0,
@@ -236,23 +236,23 @@ export const chatCompletionChunksWithFunctionCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
+    model: "gpt-3.5-turbo-0613",
     choices: [
       {
         index: 0,
-        delta: { function_call: { arguments: 'format' } },
+        delta: { function_call: { arguments: "format" } },
         finish_reason: null,
       },
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
+    model: "gpt-3.5-turbo-0613",
     choices: [
       {
         index: 0,
@@ -262,10 +262,10 @@ export const chatCompletionChunksWithFunctionCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
+    model: "gpt-3.5-turbo-0613",
     choices: [
       {
         index: 0,
@@ -275,36 +275,36 @@ export const chatCompletionChunksWithFunctionCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
+    model: "gpt-3.5-turbo-0613",
     choices: [
       {
         index: 0,
-        delta: { function_call: { arguments: 'c' } },
+        delta: { function_call: { arguments: "c" } },
         finish_reason: null,
       },
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
+    model: "gpt-3.5-turbo-0613",
     choices: [
       {
         index: 0,
-        delta: { function_call: { arguments: 'elsius' } },
+        delta: { function_call: { arguments: "elsius" } },
         finish_reason: null,
       },
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
+    model: "gpt-3.5-turbo-0613",
     choices: [
       {
         index: 0,
@@ -314,49 +314,49 @@ export const chatCompletionChunksWithFunctionCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
+    model: "gpt-3.5-turbo-0613",
     choices: [
       {
         index: 0,
-        delta: { function_call: { arguments: '}' } },
+        delta: { function_call: { arguments: "}" } },
         finish_reason: null,
       },
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
-    choices: [{ index: 0, delta: {}, finish_reason: 'function_call' }],
+    model: "gpt-3.5-turbo-0613",
+    choices: [{ index: 0, delta: {}, finish_reason: "function_call" }],
   },
 ];
 
 export const openaiFunctionCallChunks = [
   ...chatCompletionChunksWithFunctionCall,
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-0613',
-    choices: [{ index: 0, delta: {}, finish_reason: 'stop' }], // finish_reason is 'stop' whenever you provide a function to function_call parameter
+    model: "gpt-3.5-turbo-0613",
+    choices: [{ index: 0, delta: {}, finish_reason: "stop" }], // finish_reason is 'stop' whenever you provide a function to function_call parameter
   },
 ];
 
 export const chatCompletionChunksWithToolCall = [
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-1106',
+    model: "gpt-3.5-turbo-1106",
     choices: [
       {
         index: 0,
         delta: {
-          role: 'assistant',
+          role: "assistant",
           content: null,
         },
         finish_reason: null,
@@ -364,10 +364,10 @@ export const chatCompletionChunksWithToolCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-1106',
+    model: "gpt-3.5-turbo-1106",
     choices: [
       {
         index: 0,
@@ -375,11 +375,11 @@ export const chatCompletionChunksWithToolCall = [
           tool_calls: [
             {
               index: 0,
-              id: 'call_NPkY32jNUOb3Kkm7v9cOgmVg',
-              type: 'function',
+              id: "call_NPkY32jNUOb3Kkm7v9cOgmVg",
+              type: "function",
               function: {
-                name: 'get_date_time',
-                arguments: '',
+                name: "get_date_time",
+                arguments: "",
               },
             },
           ],
@@ -389,10 +389,10 @@ export const chatCompletionChunksWithToolCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-1106',
+    model: "gpt-3.5-turbo-1106",
     choices: [
       {
         index: 0,
@@ -401,7 +401,7 @@ export const chatCompletionChunksWithToolCall = [
             {
               index: 0,
               function: {
-                arguments: '{}',
+                arguments: "{}",
               },
             },
           ],
@@ -411,10 +411,10 @@ export const chatCompletionChunksWithToolCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-1106',
+    model: "gpt-3.5-turbo-1106",
     choices: [
       {
         index: 0,
@@ -422,11 +422,11 @@ export const chatCompletionChunksWithToolCall = [
           tool_calls: [
             {
               index: 1,
-              id: 'call_pOyOtXFQltSjUGsF7gnLAEcD',
-              type: 'function',
+              id: "call_pOyOtXFQltSjUGsF7gnLAEcD",
+              type: "function",
               function: {
-                name: 'open_webpage',
-                arguments: '',
+                name: "open_webpage",
+                arguments: "",
               },
             },
           ],
@@ -436,10 +436,10 @@ export const chatCompletionChunksWithToolCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-1106',
+    model: "gpt-3.5-turbo-1106",
     choices: [
       {
         index: 0,
@@ -458,10 +458,10 @@ export const chatCompletionChunksWithToolCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-1106',
+    model: "gpt-3.5-turbo-1106",
     choices: [
       {
         index: 0,
@@ -480,10 +480,10 @@ export const chatCompletionChunksWithToolCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-1106',
+    model: "gpt-3.5-turbo-1106",
     choices: [
       {
         index: 0,
@@ -492,7 +492,7 @@ export const chatCompletionChunksWithToolCall = [
             {
               index: 1,
               function: {
-                arguments: 'https:',
+                arguments: "https:",
               },
             },
           ],
@@ -502,10 +502,10 @@ export const chatCompletionChunksWithToolCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-1106',
+    model: "gpt-3.5-turbo-1106",
     choices: [
       {
         index: 0,
@@ -514,7 +514,7 @@ export const chatCompletionChunksWithToolCall = [
             {
               index: 1,
               function: {
-                arguments: '//ww',
+                arguments: "//ww",
               },
             },
           ],
@@ -524,10 +524,10 @@ export const chatCompletionChunksWithToolCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-1106',
+    model: "gpt-3.5-turbo-1106",
     choices: [
       {
         index: 0,
@@ -536,7 +536,7 @@ export const chatCompletionChunksWithToolCall = [
             {
               index: 1,
               function: {
-                arguments: 'w.lin',
+                arguments: "w.lin",
               },
             },
           ],
@@ -546,10 +546,10 @@ export const chatCompletionChunksWithToolCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-1106',
+    model: "gpt-3.5-turbo-1106",
     choices: [
       {
         index: 0,
@@ -558,7 +558,7 @@ export const chatCompletionChunksWithToolCall = [
             {
               index: 1,
               function: {
-                arguments: 'kedin.',
+                arguments: "kedin.",
               },
             },
           ],
@@ -568,10 +568,10 @@ export const chatCompletionChunksWithToolCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-1106',
+    model: "gpt-3.5-turbo-1106",
     choices: [
       {
         index: 0,
@@ -580,7 +580,7 @@ export const chatCompletionChunksWithToolCall = [
             {
               index: 1,
               function: {
-                arguments: 'com/',
+                arguments: "com/",
               },
             },
           ],
@@ -590,10 +590,10 @@ export const chatCompletionChunksWithToolCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-1106',
+    model: "gpt-3.5-turbo-1106",
     choices: [
       {
         index: 0,
@@ -602,7 +602,7 @@ export const chatCompletionChunksWithToolCall = [
             {
               index: 1,
               function: {
-                arguments: 'in/je',
+                arguments: "in/je",
               },
             },
           ],
@@ -612,10 +612,10 @@ export const chatCompletionChunksWithToolCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-1106',
+    model: "gpt-3.5-turbo-1106",
     choices: [
       {
         index: 0,
@@ -624,7 +624,7 @@ export const chatCompletionChunksWithToolCall = [
             {
               index: 1,
               function: {
-                arguments: 'ssepas',
+                arguments: "ssepas",
               },
             },
           ],
@@ -634,10 +634,10 @@ export const chatCompletionChunksWithToolCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-1106',
+    model: "gpt-3.5-turbo-1106",
     choices: [
       {
         index: 0,
@@ -656,10 +656,10 @@ export const chatCompletionChunksWithToolCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-1106',
+    model: "gpt-3.5-turbo-1106",
     choices: [
       {
         index: 0,
@@ -668,7 +668,7 @@ export const chatCompletionChunksWithToolCall = [
             {
               index: 1,
               function: {
-                arguments: '}',
+                arguments: "}",
               },
             },
           ],
@@ -678,15 +678,15 @@ export const chatCompletionChunksWithToolCall = [
     ],
   },
   {
-    id: 'chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8',
-    object: 'chat.completion.chunk',
+    id: "chatcmpl-7WBy19k4tnzMa0svAIAqkqeIaKZh8",
+    object: "chat.completion.chunk",
     created: 1687906853,
-    model: 'gpt-3.5-turbo-1106',
+    model: "gpt-3.5-turbo-1106",
     choices: [
       {
         index: 0,
         delta: {},
-        finish_reason: 'tool_calls',
+        finish_reason: "tool_calls",
       },
     ],
   },
