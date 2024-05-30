@@ -1,11 +1,25 @@
-import styles from "./page.module.css";
+"use client";
 
-import { Chat } from "@repo/core";
+import { useCompletion } from "ai/react";
 
-export default function Page(): JSX.Element {
+export default function Page() {
+  const { completion, input, handleInputChange, handleSubmit } = useCompletion({
+    api: "/mock/api/completion",
+    onResponse: (response) => {
+      console.log(response);
+    },
+  });
+
   return (
-    <main className={styles.main}>
-      <Chat />
-    </main>
+    <form onSubmit={handleSubmit}>
+      <input
+        name="prompt"
+        value={input}
+        onChange={handleInputChange}
+        id="input"
+      />
+      <button type="submit">Submit</button>
+      <div>{completion}</div>
+    </form>
   );
 }
