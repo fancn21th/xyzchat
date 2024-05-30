@@ -12,6 +12,10 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "mock": {
+      "cache": false,
+      "persistent": false
     }
   }
 }
