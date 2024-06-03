@@ -41,7 +41,7 @@ In frontend word or more specifically in React word, the source of truth is the 
 
 According to [anatomy of shadcn-ui](https://manupa.dev/blog/anatomy-of-shadcn-ui), a single component broken down to those parts
 
-- headless
+- headless[^headless/renderless]
   - state
   - behavior
 
@@ -66,3 +66,6 @@ According to [anatomy of shadcn-ui](https://manupa.dev/blog/anatomy-of-shadcn-ui
     fix `CSS Cascade affects Tailwind` caveat
 
 On top of above, the most natural way to customize the style is ...
+
+[^headless/renderless]: headless/renderless:
+    [*A example in vue.js*](https://codesandbox.io/p/sandbox/renderless-02-component-different-layout-8o2n2?file=%2Fsrc%2FApp.vue).
