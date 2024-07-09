@@ -37,6 +37,14 @@ In frontend word or more specifically in React word, the source of truth is the 
 
 ## Question 3: Standalone components and How they are glued together ?
 
+The implementation of the xyzchat should base on the design.  No matter how your design is completed it will somehow end up with something called `design system`. It is not the industry standard, but every big company has its own design system. You can also easily trace it back to the [Atomic Design](https://atomicdesign.bradfrost.com/table-of-contents/). The author of Atomic Design, Brad Frost, is believed to be the first one to introduce the concept of design system. Great job! Brad.
+
+Btw if you want to really appreciate the power of metaphor that Brad used in Atomic Design, you better review the related chemistry book. Trust me it is worth it.
+
+Like how every living thing is made up of cells in a very sophisticated way. Determining what design system is made of is never a easy job. Thought that is where fun begins right?  Just give it a try. Besides you never start from scratch. There are many tools out there for you.
+
+At this time I would like to start from layout the most basic part of design system. The glue connected every component together.
+
 ## Question 4: Customizable Style ?
 
 According to [anatomy of shadcn-ui](https://manupa.dev/blog/anatomy-of-shadcn-ui), a single component broken down to those parts
