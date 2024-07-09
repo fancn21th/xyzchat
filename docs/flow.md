@@ -45,7 +45,7 @@ Like how every living thing is made up of cells in a very sophisticated way.
 
 ![cell](https://cdn.britannica.com/03/114903-050-502CFE8D/Cutaway-drawing-cell.jpg)
 
-Determining what design system is made of is never a easy job. Thought that is where fun begins right?  Just give it a try. Besides you never start from scratch. There are many tools out there for you. Many wonderful design systems are open sourced. Take [polaris](https://polaris.shopify.com/getting-started) for example, we could build the design system based on it.
+Determining what design system is made of is never a easy job. However it is where the fun begins right?  Just give it a try. Besides you never start from scratch. There are many tools out there for you. Many wonderful design systems are open sourced. Take [polaris](https://polaris.shopify.com/getting-started) for example, we could build the design system based on it.
 
 At this time I would like to start from layout the most basic part of design system. The glue connected every component together.
 
