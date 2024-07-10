@@ -6,15 +6,17 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "mock": "turbo run mock --filter=web",
+    "storybook": "turbo run dev --filter=ds",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "prettier": "^3.2.5",
-    "turbo": "latest"
+    "turbo": "2.0.6"
   },
   "engines": {
     "node": ">=18"
-  }
+  },
+  "packageManager": "pnpm@9.0.6"
 }
