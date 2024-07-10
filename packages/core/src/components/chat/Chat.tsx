@@ -1,5 +1,9 @@
+import { ComponentProps } from "react";
+
 import { Button } from "../ui/button";
 
-export function Chat(): JSX.Element {
-  return <Button>Good Button</Button>;
+export type ChatProps = ComponentProps<"button">;
+
+export function Chat(props: ChatProps): JSX.Element {
+  return <Button {...props}>Good Button</Button>;
 }
