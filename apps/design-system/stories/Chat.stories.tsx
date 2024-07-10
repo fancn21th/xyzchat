@@ -4,7 +4,9 @@ import { Chat } from "@repo/core";
 const meta = {
   title: "Components/Button",
   component: Chat,
-  args: {},
+  args: {
+    children: "Chat",
+  },
   argTypes: {},
 } satisfies Meta;
 
