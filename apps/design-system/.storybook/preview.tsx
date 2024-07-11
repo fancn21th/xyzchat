@@ -1,5 +1,7 @@
+import React from "react";
 import type { Preview } from "@storybook/react";
 import { withThemeByClassName } from "@storybook/addon-themes";
+import { ThemeProvider } from "@repo/core";
 
 // toggle theme by @ https://storybook.js.org/recipes/tailwindcss
 const preview: Preview = {
@@ -19,6 +21,11 @@ const preview: Preview = {
       },
       defaultTheme: "light",
     }),
+    (Story) => (
+      <ThemeProvider>
+        <Story />
+      </ThemeProvider>
+    ),
   ],
 };
 

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Chat, ThemeProvider } from "@repo/core";
+import { Chat } from "@repo/core";
 
 const meta: Meta = {
   title: "Components/Chat",
@@ -8,13 +8,6 @@ const meta: Meta = {
     children: "Chat",
   },
   argTypes: {},
-  decorators: [
-    (Story) => (
-      <ThemeProvider>
-        <Story />
-      </ThemeProvider>
-    ),
-  ],
 } satisfies Meta;
 
 export default meta;
