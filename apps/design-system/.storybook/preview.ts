@@ -1,7 +1,7 @@
 import type { Preview } from "@storybook/react";
 import { withThemeByClassName } from "@storybook/addon-themes";
-// import { withThemeByDataAttribute } from "@storybook/addon-themes";
 
+// toggle theme by @ https://storybook.js.org/recipes/tailwindcss
 const preview: Preview = {
   parameters: {
     controls: {
@@ -19,14 +19,6 @@ const preview: Preview = {
       },
       defaultTheme: "light",
     }),
-    // withThemeByDataAttribute({
-    //   defaultTheme: "light",
-    //   themes: {
-    //     light: "light",
-    //     dark: "dark",
-    //   },
-    //   attributeName: "data-mode",
-    // }),
   ],
 };
 
