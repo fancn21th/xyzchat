@@ -16,3 +16,20 @@ type Story = StoryObj<typeof Chat>;
 export const Primary: Story = {
   args: {},
 };
+
+// this is a sb feature demo only
+export const Dark: Story = {
+  parameters: {
+    themes: {
+      themeOverride: "dark",
+    },
+  },
+};
+// this is a sb feature demo only
+export const Mobile: Story = {
+  parameters: {
+    viewport: {
+      defaultViewport: "mobile1",
+    },
+  },
+};
