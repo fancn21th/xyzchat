@@ -63,7 +63,7 @@ According to [anatomy of shadcn-ui](https://manupa.dev/blog/anatomy-of-shadcn-ui
 
 `shadcn-ui` gave us those tools below to customize the style of a component.
 
-- Class Variance Authority(CVA)
+- [Class Variance Authority(CVA)](https://cva.style/docs)
   - a function for defining the variance of a component
   - return another function applied styles conditionally
 
