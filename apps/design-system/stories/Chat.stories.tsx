@@ -6,8 +6,14 @@ const meta: Meta = {
   component: Chat,
   args: {
     children: "Chat",
+    variant: "default",
   },
-  argTypes: {},
+  argTypes: {
+    variant: {
+      control: "select",
+      options: ["default", "secondary"],
+    },
+  },
 } satisfies Meta;
 
 export default meta;
