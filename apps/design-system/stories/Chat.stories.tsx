@@ -14,7 +14,15 @@ export default meta;
 type Story = StoryObj<typeof Chat>;
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    variant: "default",
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    variant: "secondary",
+  },
 };
 
 // this is a sb feature demo only
