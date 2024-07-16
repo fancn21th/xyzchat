@@ -32,8 +32,9 @@ In frontend word or more specifically in React word, the source of truth is the 
 | [chatbot-ui](https://github.com/mckaywrigley/chatbot-ui)       |   context   |  |
 | [ChatGPT-Next-Web](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web)       |  custom hook    | desktop support |
 | [LibreChat](https://github.com/danny-avila/LibreChat)       |    messages tree  | [how to use](https://www.librechat.ai/docs/local/npm) |
-| [Open Webui]()       |     |  |
-| [dify]()       |     |  |
+| [Open Webui](https://github.com/open-webui/open-webui3)       |     |  |
+| [dify](https://github.com/langgenius/dify)       |     |  |
+| [anything llm](https://github.com/Mintplex-Labs/anything-llm)       |     |  |
 
 ## Question 3: Standalone components and How they are glued together ?
 
@@ -63,6 +64,8 @@ According to [anatomy of shadcn-ui](https://manupa.dev/blog/anatomy-of-shadcn-ui
 
 `shadcn-ui` gave us those tools below to customize the style of a component.
 
+> to summarize the purpose of those tools below. It serves for the purpose of customizing the style of a component. It assumes that your component must has variants. And the style will be adjusted based on the variants.
+
 - [Class Variance Authority(CVA)](https://cva.style/docs)
   - a function for defining the variance of a component
   - return another function applied styles conditionally
@@ -70,6 +73,7 @@ According to [anatomy of shadcn-ui](https://manupa.dev/blog/anatomy-of-shadcn-ui
 
 - VariantProps
   - expose the available variants as an Enum on the variants prop
+  - generated the types for the variants prop
 
 - cn
   - mix of clsx & twMerge libs
@@ -78,7 +82,9 @@ According to [anatomy of shadcn-ui](https://manupa.dev/blog/anatomy-of-shadcn-ui
   - twMerge
     fix `CSS Cascade affects Tailwind` caveat
 
-On top of above, the most natural way to customize the style is ...
+Caveats:
+
+- do use tailwind cli to do the css class tree shaking
 
 [^headless/renderless]: headless/renderless:
     [*A example in vue.js*](https://codesandbox.io/p/sandbox/renderless-02-component-different-layout-8o2n2?file=%2Fsrc%2FApp.vue).
