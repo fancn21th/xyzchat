@@ -66,6 +66,7 @@ According to [anatomy of shadcn-ui](https://manupa.dev/blog/anatomy-of-shadcn-ui
 - [Class Variance Authority(CVA)](https://cva.style/docs)
   - a function for defining the variance of a component
   - return another function applied styles conditionally
+  - an example in react [cva + tailwind / react](https://github.com/joe-bell/cva/blob/main/examples/react-with-tailwindcss/src/components/button/button.tsx)
 
 - VariantProps
   - expose the available variants as an Enum on the variants prop
