@@ -64,7 +64,7 @@ According to [anatomy of shadcn-ui](https://manupa.dev/blog/anatomy-of-shadcn-ui
 
 `shadcn-ui` gave us those tools below to customize the style of a component.
 
-> to summarize the purpose of those tools below. It serves for the purpose of customizing the style of a component. It assumes that your component must has variants. And the style will be adjusted based on the variants.
+> In short the tools below serve for the purpose of customizing the style of a component. It assumes that your component must has variants. And the style will be adjusted based on the variants. It is all about the style and the css behind it.
 
 - [Class Variance Authority(CVA)](https://cva.style/docs)
   - a function for defining the variance of a component
