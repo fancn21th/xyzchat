@@ -33,6 +33,9 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    /* grid background for dev only */
+    --grid-background-size: 0.3px;
   }
 
   .dark {
@@ -72,5 +75,19 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-image: linear-gradient(
+        rgba(255, 0, 0, 0.5) var(--grid-background-size),
+        transparent var(--grid-background-size)
+      ),
+      linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 0.5) var(--grid-background-size),
+        transparent var(--grid-background-size)
+      );
   }
 }
