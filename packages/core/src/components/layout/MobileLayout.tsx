@@ -29,7 +29,7 @@ export type MobileLayoutFooterProps = ComponentProps<"div"> & {
 
 function Header({ children, ...rest }: MobileLayoutHeaderProps) {
   return (
-    <div className="" {...rest}>
+    <div className="fixed top-0" {...rest}>
       {children}
     </div>
   );
@@ -45,7 +45,7 @@ function Body({ children, ...rest }: MobileLayoutHeaderProps) {
 
 function Footer({ children, ...rest }: MobileLayoutHeaderProps) {
   return (
-    <div className="" {...rest}>
+    <div className="fixed bottom-0" {...rest}>
       {children}
     </div>
   );

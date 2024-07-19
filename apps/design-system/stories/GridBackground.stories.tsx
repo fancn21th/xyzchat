@@ -56,6 +56,9 @@ const meta: Meta = {
     ),
   },
   argTypes: {},
+  parameters: {
+    layout: "fullscreen",
+  },
 } satisfies Meta;
 
 export default meta;

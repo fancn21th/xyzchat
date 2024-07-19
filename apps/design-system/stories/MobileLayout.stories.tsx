@@ -6,26 +6,56 @@ const meta: Meta = {
   component: MobileLayout,
   args: {
     children: [
-      <MobileLayout.Header>header</MobileLayout.Header>,
-      <MobileLayout.Body>body</MobileLayout.Body>,
-      <MobileLayout.Footer>footer</MobileLayout.Footer>,
+      <MobileLayout.Header
+        style={{
+          width: "100vw",
+          height: "48px",
+          backgroundColor: "pink",
+          opacity: 0.5,
+          textAlign: "center",
+        }}
+      >
+        Header
+      </MobileLayout.Header>,
+      <MobileLayout.Body
+        style={{
+          width: "100vw",
+          height: "100vh",
+          opacity: 0.5,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        Body
+      </MobileLayout.Body>,
+      <MobileLayout.Footer
+        style={{
+          width: "100vw",
+          height: "48px",
+          backgroundColor: "pink",
+          opacity: 0.5,
+          textAlign: "center",
+        }}
+      >
+        Footer
+      </MobileLayout.Footer>,
     ],
   },
   argTypes: {},
   decorators: [
     (Story) => (
       <GridBackground>
-        <div
-          style={{
-            width: "100vw",
-            height: "100vh",
-          }}
-        >
-          <Story />
-        </div>
+        <Story />
       </GridBackground>
     ),
   ],
+  parameters: {
+    layout: "fullscreen",
+    viewport: {
+      defaultViewport: "mobile1",
+    },
+  },
 } satisfies Meta;
 
 export default meta;
