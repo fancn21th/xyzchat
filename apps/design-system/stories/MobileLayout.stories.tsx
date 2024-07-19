@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { MobileLayout } from "@repo/core";
+import { MobileLayout, GridBackground } from "@repo/core";
 
 const meta: Meta = {
-  title: "Helpers/MobileLayout",
+  title: "Patterns/MobileLayout",
   component: MobileLayout,
   args: {
     children: [
@@ -12,6 +12,20 @@ const meta: Meta = {
     ],
   },
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <GridBackground>
+        <div
+          style={{
+            width: "100vw",
+            height: "100vh",
+          }}
+        >
+          <Story />
+        </div>
+      </GridBackground>
+    ),
+  ],
 } satisfies Meta;
 
 export default meta;
