@@ -1,5 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { MobileLayout, GridBackground, HumanInput } from "@repo/core";
+import {
+  MobileLayout,
+  GridBackground,
+  HumanInput,
+  AIMessage,
+  HumanMessage,
+} from "@repo/core";
 
 const meta: Meta = {
   title: "Examples/Basic",
@@ -10,8 +16,7 @@ const meta: Meta = {
         style={{
           width: "100vw",
           height: "48px",
-          backgroundColor: "pink",
-          opacity: 0.5,
+          borderBottom: "1px solid black",
           textAlign: "center",
           display: "flex",
           justifyContent: "center",
@@ -21,24 +26,24 @@ const meta: Meta = {
         Apps In Chat
       </MobileLayout.Header>,
       <MobileLayout.Body
+        className="space-y-4"
         style={{
           width: "100vw",
           height: "100vh",
-          opacity: 0.5,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
+          paddingTop: "56px",
+          paddingLeft: "8px",
+          paddingRight: "8px",
         }}
       >
-        Body
+        <AIMessage>我是一个机器人</AIMessage>
+        <HumanMessage>我是一个人类</HumanMessage>
       </MobileLayout.Body>,
       <MobileLayout.Footer
         style={{
           width: "100vw",
           padding: "8px",
-          backgroundColor: "pink",
-          opacity: 0.5,
           textAlign: "center",
+          borderTop: "1px solid black",
         }}
       >
         <HumanInput />
