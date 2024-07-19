@@ -79,7 +79,7 @@
 }
 
 @layer utilities {
-  .bg-grid-pattern {
+  .xyz-grid-background {
     background-image: linear-gradient(
         rgba(255, 0, 0, 0.5) var(--grid-background-size),
         transparent var(--grid-background-size)
