@@ -2,13 +2,13 @@
 
 ## How to dev
 
-- terminal 1
+- open terminal 1
 
 ```bash
 pnpm dev
 ```
 
-- terminal 2 (optional if you want to use mock data)
+- open terminal 2 (optional if you want to use mock data)
 
 ```bash
 pnpm mock
@@ -16,7 +16,7 @@ pnpm mock
 
 ## 项目目标
 
-- 当你决定开发一个新的 AI 聊天应用的时候 你就会想到 `xyzchat`
+- 当你决定开发一个新的 AI 聊天 App 的时候 你就会想到 `xyzchat`
   - 开箱即用的功能, `xyzchat` 覆盖了绝大部分常用的功能, 你可以很方便的开关这些功能
   - 样式的定制化, 你可以很方便的修改 `xyzchat`  所有的样式, 使其适应你的 UI/UX 设计需求
 
@@ -30,14 +30,26 @@ pnpm mock
 
 - 大道至简
 
+  - 苹果和特斯拉的成功就是简化了复杂的事物
+
 - 无处不代理
+
+  - 代理模式可以降低 耦合度
 
 - 不要轻易深入到细节设计, 先完成最重要的设计
 
+  - 细节可以后续再设计与优化
+
 ## 技术实现
 
+- 设计系统 与 组件库
+  - radix ui
+  - shadcn/ui
+  - storybook
+
 - 聊天应用
-  - react, radix ui, shadcn/ui
+  - react hook
+  - ai sdk
 
 - 网站
   - next.js
