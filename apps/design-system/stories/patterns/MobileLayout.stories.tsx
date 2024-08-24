@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { MobileLayout, GridBackground } from "@repo/core";
+import { MobileLayout, GridBackground } from "@xyzchat/components";
 
 const meta: Meta = {
   title: "Patterns/MobileLayout",

@@ -5,7 +5,7 @@ import {
   HumanInput,
   AIMessage,
   HumanMessage,
-} from "@repo/core";
+} from "@xyzchat/components";
 
 const meta: Meta = {
   title: "Examples/Basic",

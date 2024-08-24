@@ -10,7 +10,7 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "@repo/core": "workspace:*"
+    "@xyzchat/components": "workspace:*"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",

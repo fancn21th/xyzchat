@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { HumanMessage } from "@repo/core";
+import { HumanMessage } from "@xyzchat/components";
 
 const meta: Meta = {
   title: "Components/HumanMessage",

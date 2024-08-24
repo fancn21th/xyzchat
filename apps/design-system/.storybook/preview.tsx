@@ -1,7 +1,7 @@
 import React from "react";
 import type { Preview } from "@storybook/react";
 import { withThemeByClassName } from "@storybook/addon-themes";
-import { ThemeProvider } from "@repo/core";
+import { ThemeProvider } from "@xyzchat/components";
 
 // toggle theme by @ https://storybook.js.org/recipes/tailwindcss
 const preview: Preview = {

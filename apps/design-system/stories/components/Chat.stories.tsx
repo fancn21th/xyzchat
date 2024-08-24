@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Chat } from "@repo/core";
+import { Chat } from "@xyzchat/components";
 
 const meta: Meta = {
   title: "Components/Chat",

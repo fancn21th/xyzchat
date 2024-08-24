@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { HumanInput } from "@repo/core";
+import { HumanInput } from "@xyzchat/components";
 
 const meta: Meta = {
   title: "Components/HumanInput",

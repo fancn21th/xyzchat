@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { GridBackground } from "@repo/core";
+import { GridBackground } from "@xyzchat/components";
 
 const meta: Meta = {
   title: "Helpers/GridBackground",
