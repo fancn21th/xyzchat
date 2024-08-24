@@ -9,5 +9,5 @@
     "skipLibCheck": true
   },
   "include": ["src/**/*"],
-  "exclude": ["*/dist", "dist", "build", "node_modules"]
+  "exclude": ["node_modules"]
 }
