@@ -5,7 +5,6 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "mock": "turbo run mock --filter=web",
     "pub": "./deploy.sh",
     "build:ds": "turbo run build --filter=ds",
     "storybook": "turbo run dev --filter=ds",
