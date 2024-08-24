@@ -18,7 +18,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, "src/components"),
-      name: "core",
+      fileName: (format) => `core.${format === "es" ? "js" : "cjs"}`, // This controls the output file name
       formats: ["cjs", "es"],
     },
     rollupOptions: {

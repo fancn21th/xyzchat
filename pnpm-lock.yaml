@@ -8,10 +8,10 @@ importers:
 
   .:
     devDependencies:
-      '@repo/eslint-config':
+      '@xyzchat/eslint-config':
         specifier: workspace:*
         version: link:packages/eslint-config
-      '@repo/typescript-config':
+      '@xyzchat/typescript-config':
         specifier: workspace:*
         version: link:packages/typescript-config
       prettier:
@@ -102,6 +102,9 @@ importers:
 
   apps/mobile:
     dependencies:
+      '@xyzchat/components':
+        specifier: workspace:*
+        version: link:../../packages/core
       react:
         specifier: ^18.3.1
         version: 18.3.1
