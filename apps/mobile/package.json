@@ -10,9 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@xyzchat/components": "workspace:*",
+    "ai": "3.1.12",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "@xyzchat/components": "workspace:*"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
