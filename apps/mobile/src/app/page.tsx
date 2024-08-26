@@ -1,21 +1,17 @@
+"use client";
+
 import { useCompletion } from "ai/react";
 
-export default function Page() {
-  const { completion, complete } = useCompletion({
-    api: "/api/completion",
-  });
+export default function Chat() {
+  const { completion, input, handleInputChange, handleSubmit } =
+    useCompletion();
 
   return (
     <div>
-      <div
-        onClick={async () => {
-          await complete("Why is the sky blue?");
-        }}
-      >
-        Generate
-      </div>
-
       {completion}
+      <form onSubmit={handleSubmit}>
+        <input value={input} onChange={handleInputChange} />
+      </form>
     </div>
   );
 }
