@@ -4,7 +4,7 @@ import { LangChainAdapter } from "ai";
 
 export const maxDuration = 60;
 
-const proxyUrl = "http://localhost:7892";
+const proxyUrl = process.env.PROXY_URL || "http://localhost:3128";
 const proxyAgent = new HttpsProxyAgent(proxyUrl);
 
 export async function POST(req: Request) {
