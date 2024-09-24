@@ -2,23 +2,15 @@
 
 ## How to dev
 
-- open terminal 1
-
 ```bash
 pnpm dev
 ```
 
-- open terminal 2 (optional if you want to use mock data)
-
-```bash
-pnpm mock
-```
-
 ## 项目目标
 
-- 当你决定开发一个新的 AI 聊天 App 的时候 你就会想到 `xyzchat`
-  - 开箱即用的功能, `xyzchat` 覆盖了绝大部分常用的功能, 你可以很方便的开关这些功能
-  - 样式的定制化, 你可以很方便的修改 `xyzchat`  所有的样式, 使其适应你的 UI/UX 设计需求
+- 对于 AI Chatbot 的不断探索 吸纳主流 Chatbot 开发技术
+- 在 设计系统层面 进行 横向的扩展
+- 基于 AI SDK 的 custom provider 提供模型的扩展
 
 ## 设计思想
 
@@ -30,7 +22,7 @@ pnpm mock
 
 - 大道至简
 
-  - 苹果和特斯拉的成功就是简化了复杂的事物
+  - 苹果和特斯拉的成功就是简化了复杂的事物, 将复杂度从用户的角度进行了转移
 
 - 无处不代理
 
@@ -48,10 +40,7 @@ pnpm mock
   - storybook
 
 - 聊天应用
-  - react hook
   - ai sdk
-
-- 网站
   - next.js
 
 ## 工作流
