@@ -4,10 +4,9 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "dev:component": "turbo dev:component",
     "lint": "turbo lint",
     "pub": "./deploy.sh",
-    "build:ds": "turbo run build --filter=ds",
-    "storybook": "turbo run dev --filter=ds",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {

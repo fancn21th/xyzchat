@@ -13,6 +13,10 @@
       "cache": false,
       "persistent": true
     },
+    "dev:component": {
+      "cache": false,
+      "persistent": true
+    },
     "mock": {
       "cache": false,
       "persistent": false

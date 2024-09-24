@@ -1,9 +1,29 @@
 # xyzchat 项目
 
+## How to setup
+
+```bash
+pnpm install
+```
+
 ## How to dev
+
+- build component
+
+```bash
+pnpm dev:component
+```
+
+- build application
 
 ```bash
 pnpm dev
+```
+
+## How to build
+
+```bash
+pnpm build
 ```
 
 ## 项目目标
