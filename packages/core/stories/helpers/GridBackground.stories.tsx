@@ -1,5 +1,6 @@
+import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { GridBackground } from "../../src/components";
+import { GridBackground } from "@/components";
 
 const meta: Meta = {
   title: "Helpers/GridBackground",
