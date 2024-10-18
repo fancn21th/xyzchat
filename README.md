@@ -2,29 +2,7 @@
 
 ## How to setup
 
-```bash
-pnpm install
-```
-
-## How to dev
-
-- build component
-
-```bash
-pnpm dev:component
-```
-
-- build application
-
-```bash
-pnpm dev
-```
-
 ## How to build
-
-```bash
-pnpm build
-```
 
 ## 项目目标
 
@@ -62,6 +40,24 @@ pnpm build
 - 聊天应用
   - ai sdk
   - next.js
+
+## 项目结构
+
+```
+.
+├── README.md
+├── apps
+│   ├── mobile                      # mobile app
+│   └── mock-api                    # mock the custom ai api server
+├── deploy.sh
+├── docs                            # docs
+├── package.json
+├── packages
+│   └── core                        # core ui components
+├── pnpm-lock.yaml
+├── pnpm-workspace.yaml
+└── turbo.json
+```
 
 ## 工作流
 
