@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
+    "build:sb": "turbo build:sb",
     "dev": "turbo dev",
     "dev:component": "turbo dev:component",
     "lint": "turbo lint",

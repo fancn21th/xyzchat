@@ -7,7 +7,7 @@ set -e
 npm run build:ds
 
 # 进入生成的文件夹
-cd apps/design-system/storybook-static
+cd packages/core/storybook-static
 
 # 如果是发布到自定义域名
 echo 'xyzchat.fancn21th.cn' > CNAME
