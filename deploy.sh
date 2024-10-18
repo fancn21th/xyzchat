@@ -4,7 +4,7 @@
 set -e
 
 # 生成静态文件
-npm run build:ds
+npm run build:sb
 
 # 进入生成的文件夹
 cd packages/core/storybook-static
