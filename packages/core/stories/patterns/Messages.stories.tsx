@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Messages } from "@/components";
+import { Messages, HumanMessage, AIMessage } from "@/components";
+import { Fragment } from "react";
 
 const meta: Meta = {
   title: "Patterns/Messages",
@@ -8,9 +9,13 @@ const meta: Meta = {
     children: (
       <>
         {new Array(30).fill(null).map((_, index) => (
-          <div key={index} className="my-4 border border-red-400">
-            {index}
-          </div>
+          <Fragment key={index}>
+            {index % 2 === 0 ? (
+              <HumanMessage>I am Human {index}</HumanMessage>
+            ) : (
+              <AIMessage>I am AI {index}</AIMessage>
+            )}
+          </Fragment>
         ))}
       </>
     ),

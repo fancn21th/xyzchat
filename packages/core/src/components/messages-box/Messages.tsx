@@ -13,10 +13,10 @@ export function Messages({ className, children }: MessagesProps) {
   return (
     <>
       <div className="" onClick={scrollToBottom}>
-        {isAtBottom ? "bottom" : "not bottom"}
+        Scroll Status: {isAtBottom ? "bottom" : "not bottom"}
       </div>
       <div className="w-full h-[400px] overflow-y-auto" ref={scrollRef}>
-        <div className={cn("py-4 border", className)} ref={messagesRef}>
+        <div className={cn("border", className)} ref={messagesRef}>
           {children}
           <div className="w-full h-px" ref={visibilityRef} />
         </div>
