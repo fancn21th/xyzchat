@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { AIMessage } from "@/components";
 
 const meta: Meta = {
-  title: "Components/AIMessage",
+  title: "Heros/AIMessage",
   component: AIMessage,
   args: {
     children: "我是一个机器人",

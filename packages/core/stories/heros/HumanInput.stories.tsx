@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { HumanInput } from "@/components";
 
 const meta: Meta = {
-  title: "Components/HumanInput",
+  title: "Heros/HumanInput",
   component: HumanInput,
   args: {
     type: "text",
