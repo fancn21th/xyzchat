@@ -6,7 +6,9 @@ import { AIMessage, HumanInput, HumanMessage } from "@/components/adaptor";
 import { Fragment } from "react";
 
 export default function Page() {
-  const { messages, input, setInput, handleSubmit } = useChat();
+  const { messages, input, setInput, handleSubmit } = useChat({
+    streamProtocol: "text", // https://sdk.vercel.ai/docs/ai-sdk-ui/chatbot#controlling-the-response-stream
+  });
 
   return (
     <div>
