@@ -2,28 +2,35 @@
 
 // https://sdk.vercel.ai/docs/ai-sdk-rsc/migrating-to-ui
 import { useChat } from "ai/react";
+import { AIMessage, HumanInput, HumanMessage } from "@/components/adaptor";
+import { Fragment } from "react";
 
 export default function Page() {
   const { messages, input, setInput, handleSubmit } = useChat();
 
   return (
     <div>
-      {messages.map((message) => (
-        <div key={message.id}>
-          <div>{message.role}</div>
-          <div>{message.content}</div>
-        </div>
-      ))}
+      {messages.map(({ id, role, content }) => {
+        return (
+          <Fragment key={id}>
+            {role === "assistant" ? (
+              <AIMessage>{content}</AIMessage>
+            ) : (
+              <HumanMessage>{content}</HumanMessage>
+            )}
+          </Fragment>
+        );
+      })}
 
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={input}
+        {/*
+          onChange event prop will be applied to input inside of HumanInput component
+        */}
+        <HumanInput
           onChange={(event) => {
             setInput(event.target.value);
           }}
         />
-        <button type="submit">Send</button>
       </form>
     </div>
   );
