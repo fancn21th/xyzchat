@@ -2,7 +2,27 @@
 
 ## How to setup
 
+> This is a monorepo project driven by turbo
+
+```bash
+pnpm install
+```
+
 ## How to build
+
+```bash
+pnpm build
+```
+
+## How to dev
+
+- build components
+
+```bash
+pnpm dev:component
+```
+
+- build mobile app
 
 ## 项目目标
 
