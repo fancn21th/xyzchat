@@ -1,13 +1,30 @@
-import { AIMessage } from "@/components/adaptor";
+"use client";
 
-export const metadata = {
-  title: "xyz chat | chat",
-};
+// https://sdk.vercel.ai/docs/ai-sdk-rsc/migrating-to-ui
+import { useChat } from "ai/react";
 
-export default async function IndexPage() {
+export default function Page() {
+  const { messages, input, setInput, handleSubmit } = useChat();
+
   return (
-    <>
-      <AIMessage>hello world!</AIMessage>
-    </>
+    <div>
+      {messages.map((message) => (
+        <div key={message.id}>
+          <div>{message.role}</div>
+          <div>{message.content}</div>
+        </div>
+      ))}
+
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={input}
+          onChange={(event) => {
+            setInput(event.target.value);
+          }}
+        />
+        <button type="submit">Send</button>
+      </form>
+    </div>
   );
 }
