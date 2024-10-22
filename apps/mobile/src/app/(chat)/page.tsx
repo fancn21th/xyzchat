@@ -8,11 +8,32 @@ import {
   HumanMessage,
   GridBackground,
 } from "@/components/adaptor";
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
+
+// stream handler
+const AIMessageProxy = ({ content }: { content: string }) => {
+  const [text, setText] = useState("");
+
+  // https://sdk.vercel.ai/docs/ai-sdk-ui/stream-protocol#text-stream-protocol
+  useEffect(() => {
+    console.log("content", content);
+    const lines = content.split("\n");
+    const newText = lines.reduce<string[]>((pre, acc) => {
+      const next = acc.split(":");
+      if (next[0] === "0") pre.push(next[1].slice(1, -1));
+      return pre;
+    }, []);
+    console.log(newText);
+    setText(newText.join(""));
+  }, [content]);
+
+  return <AIMessage className="mb-2">{text}</AIMessage>;
+};
 
 export default function Page() {
-  const { messages, input, setInput, handleSubmit } = useChat({
-    streamProtocol: "text", // https://sdk.vercel.ai/docs/ai-sdk-ui/chatbot#controlling-the-response-stream
+  // https://sdk.vercel.ai/docs/reference/ai-sdk-ui/use-chat
+  const { messages, setInput, handleSubmit } = useChat({
+    streamProtocol: "text",
   });
 
   return (
@@ -23,7 +44,7 @@ export default function Page() {
             return (
               <Fragment key={id}>
                 {role === "assistant" ? (
-                  <AIMessage className="mb-2">{content}</AIMessage>
+                  <AIMessageProxy content={content}></AIMessageProxy>
                 ) : (
                   <HumanMessage className="mb-2">{content}</HumanMessage>
                 )}
