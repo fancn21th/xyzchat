@@ -1,4 +1,9 @@
 // adaptor
 "use client";
 
-export { AIMessage, HumanInput, HumanMessage } from "@xyzchat/components";
+export {
+  AIMessage,
+  HumanInput,
+  HumanMessage,
+  GridBackground,
+} from "@xyzchat/components";

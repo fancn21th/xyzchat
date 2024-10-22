@@ -2,7 +2,12 @@
 
 // https://sdk.vercel.ai/docs/ai-sdk-rsc/migrating-to-ui
 import { useChat } from "ai/react";
-import { AIMessage, HumanInput, HumanMessage } from "@/components/adaptor";
+import {
+  AIMessage,
+  HumanInput,
+  HumanMessage,
+  GridBackground,
+} from "@/components/adaptor";
 import { Fragment } from "react";
 
 export default function Page() {
@@ -11,29 +16,34 @@ export default function Page() {
   });
 
   return (
-    <div>
-      {messages.map(({ id, role, content }) => {
-        return (
-          <Fragment key={id}>
-            {role === "assistant" ? (
-              <AIMessage>{content}</AIMessage>
-            ) : (
-              <HumanMessage>{content}</HumanMessage>
-            )}
-          </Fragment>
-        );
-      })}
+    <GridBackground>
+      <div className="flex flex-col min-h-screen p-4">
+        <div className="flex-1">
+          {" "}
+          {messages.map(({ id, role, content }) => {
+            return (
+              <Fragment key={id}>
+                {role === "assistant" ? (
+                  <AIMessage>{content}</AIMessage>
+                ) : (
+                  <HumanMessage>{content}</HumanMessage>
+                )}
+              </Fragment>
+            );
+          })}
+        </div>
 
-      <form onSubmit={handleSubmit}>
-        {/*
+        <form onSubmit={handleSubmit}>
+          {/*
           onChange event prop will be applied to input inside of HumanInput component
         */}
-        <HumanInput
-          onChange={(event) => {
-            setInput(event.target.value);
-          }}
-        />
-      </form>
-    </div>
+          <HumanInput
+            onChange={(event) => {
+              setInput(event.target.value);
+            }}
+          />
+        </form>
+      </div>
+    </GridBackground>
   );
 }
