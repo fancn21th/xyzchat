@@ -26,19 +26,19 @@ Still We need an agent to wrap it up and make it become the lower dependency. Th
 
 In frontend word or more specifically in React word, the source of truth is the state / behavior. which is commonly encapsulated as hook. Let's see how Open Source community handle it as table below.
 
-| Project              | Data Layer | Comment |
-| :---------------- | :------: | ----: |
-| [nextjs-vllm-ui](https://github.com/yoziru/nextjs-vllm-ui)       |   ai/react   | coupled with ai/react |
-| [chatbot-ui](https://github.com/mckaywrigley/chatbot-ui)       |   context   |  |
-| [ChatGPT-Next-Web](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web)       |  custom hook    | desktop support |
-| [LibreChat](https://github.com/danny-avila/LibreChat)       |    messages tree  | [how to use](https://www.librechat.ai/docs/local/npm) |
-| [Open Webui](https://github.com/open-webui/open-webui3)       |     |  |
-| [dify](https://github.com/langgenius/dify)       |     |  |
-| [anything llm](https://github.com/Mintplex-Labs/anything-llm)       |     |  |
+| Project                                                                |  Data Layer   |                                               Comment |
+| :--------------------------------------------------------------------- | :-----------: | ----------------------------------------------------: |
+| [nextjs-vllm-ui](https://github.com/yoziru/nextjs-vllm-ui)             |   ai/react    |                                 coupled with ai/react |
+| [chatbot-ui](https://github.com/mckaywrigley/chatbot-ui)               |    context    |                                                       |
+| [ChatGPT-Next-Web](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web) |  custom hook  |                                       desktop support |
+| [LibreChat](https://github.com/danny-avila/LibreChat)                  | messages tree | [how to use](https://www.librechat.ai/docs/local/npm) |
+| [Open Webui](https://github.com/open-webui/open-webui3)                |               |                                                       |
+| [dify](https://github.com/langgenius/dify)                             |               |                                                       |
+| [anything llm](https://github.com/Mintplex-Labs/anything-llm)          |               |                                                       |
 
 ## Question 3: Standalone components and How they are glued together ?
 
-The implementation of the xyzchat should base on the design.  No matter how your design is completed it will somehow end up with something called `design system`. It is not the industry standard, but every big company has its own design system. You can also easily trace it back to the [Atomic Design](https://atomicdesign.bradfrost.com/table-of-contents/). The author of Atomic Design, Brad Frost, is believed to be the first one to introduce the concept of design system. Great job! Brad.
+The implementation of the xyzchat should base on the design. No matter how your design is completed it will somehow end up with something called `design system`. It is not the industry standard, but every big company has its own design system. You can also easily trace it back to the [Atomic Design](https://atomicdesign.bradfrost.com/table-of-contents/). The author of Atomic Design, Brad Frost, is believed to be the first one to introduce the concept of design system. Great job! Brad.
 
 Btw if you want to really appreciate the power of metaphor that Brad used in Atomic Design, you better review the related chemistry textbook. Trust me it is worth it.
 
@@ -46,7 +46,7 @@ Like how every living thing is made up of cells in a very sophisticated way.
 
 ![cell](https://cdn.britannica.com/03/114903-050-502CFE8D/Cutaway-drawing-cell.jpg)
 
-Determining what design system is made of is never a easy job. However it is where the fun begins right?  Just give it a try. Besides you never start from scratch. There are many tools out there for you. Many wonderful design systems are open sourced. Take [polaris](https://polaris.shopify.com/getting-started) for example, we could build the design system based on it.
+Determining what design system is made of is never a easy job. However it is where the fun begins right? Just give it a try. Besides you never start from scratch. There are many tools out there for you. Many wonderful design systems are open sourced. Take [polaris](https://polaris.shopify.com/getting-started) for example, we could build the design system based on it.
 
 At this time I would like to start from layout the most basic part of design system. The glue connected every component together.
 
@@ -55,6 +55,7 @@ At this time I would like to start from layout the most basic part of design sys
 According to [anatomy of shadcn-ui](https://manupa.dev/blog/anatomy-of-shadcn-ui), a single component broken down to those parts
 
 - headless[^headless/renderless]
+
   - state
   - behavior
 
@@ -67,11 +68,13 @@ According to [anatomy of shadcn-ui](https://manupa.dev/blog/anatomy-of-shadcn-ui
 > In short the tools below serve for the purpose of customizing the style of a component. It assumes that your component must has variants. And the style will be adjusted based on the variants. It is all about the style and the css behind it.
 
 - [Class Variance Authority(CVA)](https://cva.style/docs)
+
   - a function for defining the variance of a component
   - return another function applied styles conditionally
   - an example in react [cva + tailwind / react](https://github.com/joe-bell/cva/blob/main/examples/react-with-tailwindcss/src/components/button/button.tsx)
 
 - VariantProps
+
   - expose the available variants as an Enum on the variants prop
   - generated the types for the variants prop
 
@@ -86,5 +89,6 @@ Caveats:
 
 - do use tailwind cli to do the css class tree shaking
 
-[^headless/renderless]: headless/renderless:
-    [*A example in vue.js*](https://codesandbox.io/p/sandbox/renderless-02-component-different-layout-8o2n2?file=%2Fsrc%2FApp.vue).
+[^headless/renderless]:
+    headless/renderless:
+    [_A example in vue.js_](https://codesandbox.io/p/sandbox/renderless-02-component-different-layout-8o2n2?file=%2Fsrc%2FApp.vue).

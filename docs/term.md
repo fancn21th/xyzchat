@@ -2,7 +2,7 @@
 
 ## Layering
 
-UI or Frontend is also refereed as  HCI, Human Computer Interaction.
+UI or Frontend is also refereed as HCI, Human Computer Interaction.
 
 Fundamentally, it serves the data to user and collect the data from user, back and forth.
 
@@ -26,7 +26,7 @@ Fundamentally, it serves the data to user and collect the data from user, back a
 
   - a quick look
 
-    >The event stream is a simple stream of text data which must be encoded using UTF-8. Messages in the event stream are separated by a pair of newline characters. A colon as the first character of a line is in essence a comment, and is ignored.
+    > The event stream is a simple stream of text data which must be encoded using UTF-8. Messages in the event stream are separated by a pair of newline characters. A colon as the first character of a line is in essence a comment, and is ignored.
 
     ```bash
     : this is a test stream
