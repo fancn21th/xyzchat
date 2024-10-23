@@ -11,7 +11,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       {/* todo: removed the fixed outline border */}
       <body
         className={cn(
-          "font-sans antialiased w-screen full-viewport-height m-auto overflow-hidden"
+          "font-sans antialiased w-screen h-lvh m-auto overflow-hidden"
         )}
       >
         {children}

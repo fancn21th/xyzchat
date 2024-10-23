@@ -6,4 +6,5 @@ export {
   HumanInput,
   HumanMessage,
   GridBackground,
+  Messages,
 } from "@xyzchat/components";

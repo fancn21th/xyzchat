@@ -7,6 +7,7 @@ import {
   HumanInput,
   HumanMessage,
   GridBackground,
+  Messages,
 } from "@/components/adaptor";
 import { Fragment, useEffect, useState } from "react";
 
@@ -38,22 +39,24 @@ export default function Page() {
 
   return (
     <GridBackground>
-      <div className="flex flex-col min-h-screen p-4">
-        <div className="flex-1">
-          {messages.map(({ id, role, content }) => {
-            return (
-              <Fragment key={id}>
-                {role === "assistant" ? (
-                  <AIMessageProxy content={content}></AIMessageProxy>
-                ) : (
-                  <HumanMessage className="mb-2">{content}</HumanMessage>
-                )}
-              </Fragment>
-            );
-          })}
+      <div className="h-full">
+        <div className="h-full pb-[56px] pt-2 px-2">
+          <Messages>
+            {messages.map(({ id, role, content }) => {
+              return (
+                <Fragment key={id}>
+                  {role === "assistant" ? (
+                    <AIMessageProxy content={content}></AIMessageProxy>
+                  ) : (
+                    <HumanMessage className="mb-2">{content}</HumanMessage>
+                  )}
+                </Fragment>
+              );
+            })}
+          </Messages>
         </div>
 
-        <form onSubmit={handleSubmit} className="py-4">
+        <form onSubmit={handleSubmit} className="w-full fixed bottom-0 p-2">
           {/*
           onChange event prop will be applied to input inside of HumanInput component
         */}

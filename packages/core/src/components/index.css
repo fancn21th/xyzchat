@@ -81,12 +81,12 @@
 @layer utilities {
   .xyz-grid-background {
     background-image: linear-gradient(
-        rgba(255, 0, 0, 0.5) var(--grid-background-size),
+        rgba(217, 217, 217, 0.5) var(--grid-background-size),
         transparent var(--grid-background-size)
       ),
       linear-gradient(
         90deg,
-        rgba(255, 0, 0, 0.5) var(--grid-background-size),
+        rgba(217, 217, 217, 0.5) var(--grid-background-size),
         transparent var(--grid-background-size)
       );
   }

@@ -23,7 +23,7 @@ const meta: Meta = {
   argTypes: {},
   decorators: [
     (Story) => (
-      <div className="overflow-y-hidden">
+      <div className="border border-gray-500 overflow-hidden h-[calc(100vh_-_30px)]">
         <Story />
       </div>
     ),
