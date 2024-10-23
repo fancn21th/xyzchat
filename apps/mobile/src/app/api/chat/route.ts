@@ -6,9 +6,7 @@ const openai = createAzure({
   apiKey: process.env.AZURE_OPENAI_API_KEY,
 });
 
-export async function POST(request: {
-  json: () => PromiseLike<{ messages: any }> | { messages: any };
-}) {
+export async function POST(request: Request) {
   const { messages } = await request.json();
 
   const coreMessages = convertToCoreMessages(messages);
