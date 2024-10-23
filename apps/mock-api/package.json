@@ -6,8 +6,8 @@
   "author": "fancn21th <fancn21th@aliyun.com> (http://fancn21th.cn/)",
   "license": "MIT",
   "scripts": {
-    "dev:mock": "tsc-watch --onSuccess \"node dist/server.js\"",
-    "mock:mock": "tsc"
+    "mock": "tsc-watch --onSuccess \"node dist/server.js\"",
+    "build:moc": "tsc"
   },
   "dependencies": {
     "@mswjs/http-middleware": "0.10.1",
