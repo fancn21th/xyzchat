@@ -33,7 +33,7 @@ const AIMessageProxy = ({ content }: { content: string }) => {
 
 export default function Page() {
   // https://sdk.vercel.ai/docs/reference/ai-sdk-ui/use-chat
-  const { messages, setInput, handleSubmit } = useChat({
+  const { messages, input, setInput, handleSubmit } = useChat({
     streamProtocol: "text",
   });
 
@@ -61,6 +61,7 @@ export default function Page() {
           onChange event prop will be applied to input inside of HumanInput component
         */}
           <HumanInput
+            input={input}
             onChange={(event) => {
               setInput(event.target.value);
             }}
