@@ -7,27 +7,27 @@ export type MistralChatMessage =
   | MistralToolMessage;
 
 export interface MistralSystemMessage {
-  role: 'system';
+  role: "system";
   content: string;
 }
 
 export interface MistralUserMessage {
-  role: 'user';
+  role: "user";
   content: string;
 }
 
 export interface MistralAssistantMessage {
-  role: 'assistant';
+  role: "assistant";
   content: string;
   tool_calls?: Array<{
     id: string;
-    type: 'function';
+    type: "function";
     function: { name: string; arguments: string };
   }>;
 }
 
 export interface MistralToolMessage {
-  role: 'tool';
+  role: "tool";
   name: string;
   content: string;
   tool_call_id: string;

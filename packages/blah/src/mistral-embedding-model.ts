@@ -1,19 +1,19 @@
 import {
   EmbeddingModelV1,
   TooManyEmbeddingValuesForCallError,
-} from '@ai-sdk/provider';
+} from "@ai-sdk/provider";
 import {
   combineHeaders,
   createJsonResponseHandler,
   FetchFunction,
   postJsonToApi,
-} from '@ai-sdk/provider-utils';
-import { z } from 'zod';
+} from "@ai-sdk/provider-utils";
+import { z } from "zod";
 import {
   MistralEmbeddingModelId,
   MistralEmbeddingSettings,
-} from './mistral-embedding-settings';
-import { mistralFailedResponseHandler } from './mistral-error';
+} from "./mistral-embedding-settings";
+import { mistralFailedResponseHandler } from "./mistral-error";
 
 type MistralEmbeddingConfig = {
   provider: string;
@@ -23,7 +23,7 @@ type MistralEmbeddingConfig = {
 };
 
 export class MistralEmbeddingModel implements EmbeddingModelV1<string> {
-  readonly specificationVersion = 'v1';
+  readonly specificationVersion = "v1";
   readonly modelId: MistralEmbeddingModelId;
 
   private readonly config: MistralEmbeddingConfig;
@@ -46,7 +46,7 @@ export class MistralEmbeddingModel implements EmbeddingModelV1<string> {
   constructor(
     modelId: MistralEmbeddingModelId,
     settings: MistralEmbeddingSettings,
-    config: MistralEmbeddingConfig,
+    config: MistralEmbeddingConfig
   ) {
     this.modelId = modelId;
     this.settings = settings;
@@ -57,8 +57,8 @@ export class MistralEmbeddingModel implements EmbeddingModelV1<string> {
     values,
     abortSignal,
     headers,
-  }: Parameters<EmbeddingModelV1<string>['doEmbed']>[0]): Promise<
-    Awaited<ReturnType<EmbeddingModelV1<string>['doEmbed']>>
+  }: Parameters<EmbeddingModelV1<string>["doEmbed"]>[0]): Promise<
+    Awaited<ReturnType<EmbeddingModelV1<string>["doEmbed"]>>
   > {
     if (values.length > this.maxEmbeddingsPerCall) {
       throw new TooManyEmbeddingValuesForCallError({
@@ -75,18 +75,18 @@ export class MistralEmbeddingModel implements EmbeddingModelV1<string> {
       body: {
         model: this.modelId,
         input: values,
-        encoding_format: 'float',
+        encoding_format: "float",
       },
       failedResponseHandler: mistralFailedResponseHandler,
       successfulResponseHandler: createJsonResponseHandler(
-        MistralTextEmbeddingResponseSchema,
+        MistralTextEmbeddingResponseSchema
       ),
       abortSignal,
       fetch: this.config.fetch,
     });
 
     return {
-      embeddings: response.data.map(item => item.embedding),
+      embeddings: response.data.map((item) => item.embedding),
       usage: response.usage
         ? { tokens: response.usage.prompt_tokens }
         : undefined,

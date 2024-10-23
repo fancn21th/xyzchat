@@ -2,22 +2,22 @@ import {
   FetchFunction,
   loadApiKey,
   withoutTrailingSlash,
-} from '@ai-sdk/provider-utils';
-import { MistralChatLanguageModel } from './mistral-chat-language-model';
+} from "@ai-sdk/provider-utils";
+import { MistralChatLanguageModel } from "./mistral-chat-language-model";
 import {
   MistralChatModelId,
   MistralChatSettings,
-} from './mistral-chat-settings';
-import { MistralEmbeddingModel } from './mistral-embedding-model';
+} from "./mistral-chat-settings";
+import { MistralEmbeddingModel } from "./mistral-embedding-model";
 import {
   MistralEmbeddingModelId,
   MistralEmbeddingSettings,
-} from './mistral-embedding-settings';
+} from "./mistral-embedding-settings";
 
 export interface MistralProvider {
   (
     modelId: MistralChatModelId,
-    settings?: MistralChatSettings,
+    settings?: MistralChatSettings
   ): MistralChatLanguageModel;
 
   /**
@@ -25,7 +25,7 @@ Creates a model for text generation.
 */
   languageModel(
     modelId: MistralChatModelId,
-    settings?: MistralChatSettings,
+    settings?: MistralChatSettings
   ): MistralChatLanguageModel;
 
   /**
@@ -33,7 +33,7 @@ Creates a model for text generation.
 */
   chat(
     modelId: MistralChatModelId,
-    settings?: MistralChatSettings,
+    settings?: MistralChatSettings
   ): MistralChatLanguageModel;
 
   /**
@@ -41,7 +41,7 @@ Creates a model for text embeddings.
    */
   embedding(
     modelId: MistralEmbeddingModelId,
-    settings?: MistralEmbeddingSettings,
+    settings?: MistralEmbeddingSettings
   ): MistralEmbeddingModel;
 
   /**
@@ -49,7 +49,7 @@ Creates a model for text embeddings.
    */
   textEmbedding(
     modelId: MistralEmbeddingModelId,
-    settings?: MistralEmbeddingSettings,
+    settings?: MistralEmbeddingSettings
   ): MistralEmbeddingModel;
 }
 
@@ -87,27 +87,27 @@ or to provide a custom fetch implementation for e.g. testing.
 Create a Mistral AI provider instance.
  */
 export function createMistral(
-  options: MistralProviderSettings = {},
+  options: MistralProviderSettings = {}
 ): MistralProvider {
   const baseURL =
     withoutTrailingSlash(options.baseURL ?? options.baseUrl) ??
-    'https://api.mistral.ai/v1';
+    "https://api.mistral.ai/v1";
 
   const getHeaders = () => ({
     Authorization: `Bearer ${loadApiKey({
       apiKey: options.apiKey,
-      environmentVariableName: 'MISTRAL_API_KEY',
-      description: 'Mistral',
+      environmentVariableName: "MISTRAL_API_KEY",
+      description: "Mistral",
     })}`,
     ...options.headers,
   });
 
   const createChatModel = (
     modelId: MistralChatModelId,
-    settings: MistralChatSettings = {},
+    settings: MistralChatSettings = {}
   ) =>
     new MistralChatLanguageModel(modelId, settings, {
-      provider: 'mistral.chat',
+      provider: "mistral.chat",
       baseURL,
       headers: getHeaders,
       fetch: options.fetch,
@@ -115,10 +115,10 @@ export function createMistral(
 
   const createEmbeddingModel = (
     modelId: MistralEmbeddingModelId,
-    settings: MistralEmbeddingSettings = {},
+    settings: MistralEmbeddingSettings = {}
   ) =>
     new MistralEmbeddingModel(modelId, settings, {
-      provider: 'mistral.embedding',
+      provider: "mistral.embedding",
       baseURL,
       headers: getHeaders,
       fetch: options.fetch,
@@ -126,11 +126,11 @@ export function createMistral(
 
   const provider = function (
     modelId: MistralChatModelId,
-    settings?: MistralChatSettings,
+    settings?: MistralChatSettings
   ) {
     if (new.target) {
       throw new Error(
-        'The Mistral model function cannot be called with the new keyword.',
+        "The Mistral model function cannot be called with the new keyword."
       );
     }
 

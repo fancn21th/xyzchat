@@ -1,27 +1,27 @@
-import { convertToMistralChatMessages } from './convert-to-mistral-chat-messages';
+import { convertToMistralChatMessages } from "./convert-to-mistral-chat-messages";
 
-describe('tool calls', () => {
-  it('should stringify arguments to tool calls', () => {
+describe("tool calls", () => {
+  it("should stringify arguments to tool calls", () => {
     const result = convertToMistralChatMessages([
       {
-        role: 'assistant',
+        role: "assistant",
         content: [
           {
-            type: 'tool-call',
-            args: { key: 'arg-value' },
-            toolCallId: 'tool-call-id-1',
-            toolName: 'tool-1',
+            type: "tool-call",
+            args: { key: "arg-value" },
+            toolCallId: "tool-call-id-1",
+            toolName: "tool-1",
           },
         ],
       },
       {
-        role: 'tool',
+        role: "tool",
         content: [
           {
-            type: 'tool-result',
-            toolCallId: 'tool-call-id-1',
-            toolName: 'tool-1',
-            result: { key: 'result-value' },
+            type: "tool-result",
+            toolCallId: "tool-call-id-1",
+            toolName: "tool-1",
+            result: { key: "result-value" },
           },
         ],
       },
@@ -29,24 +29,24 @@ describe('tool calls', () => {
 
     expect(result).toEqual([
       {
-        role: 'assistant',
-        content: '',
+        role: "assistant",
+        content: "",
         tool_calls: [
           {
-            type: 'function',
-            id: 'tool-call-id-1',
+            type: "function",
+            id: "tool-call-id-1",
             function: {
-              name: 'tool-1',
-              arguments: JSON.stringify({ key: 'arg-value' }),
+              name: "tool-1",
+              arguments: JSON.stringify({ key: "arg-value" }),
             },
           },
         ],
       },
       {
-        role: 'tool',
-        content: JSON.stringify({ key: 'result-value' }),
-        name: 'tool-1',
-        tool_call_id: 'tool-call-id-1',
+        role: "tool",
+        content: JSON.stringify({ key: "result-value" }),
+        name: "tool-1",
+        tool_call_id: "tool-call-id-1",
       },
     ]);
   });

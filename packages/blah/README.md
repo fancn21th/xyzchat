@@ -15,18 +15,18 @@ npm i @ai-sdk/blah
 You can import the default provider instance `mistral` from `@ai-sdk/blah`:
 
 ```ts
-import { mistral } from '@ai-sdk/blah';
+import { mistral } from "@ai-sdk/blah";
 ```
 
 ## Example
 
 ```ts
-import { mistral } from '@ai-sdk/blah';
-import { generateText } from 'ai';
+import { mistral } from "@ai-sdk/blah";
+import { generateText } from "ai";
 
 const { text } = await generateText({
-  model: mistral('mistral-large-latest'),
-  prompt: 'Write a vegetarian lasagna recipe for 4 people.',
+  model: mistral("mistral-large-latest"),
+  prompt: "Write a vegetarian lasagna recipe for 4 people.",
 });
 ```
 

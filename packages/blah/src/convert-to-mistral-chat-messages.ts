@@ -1,60 +1,60 @@
 import {
   LanguageModelV1Prompt,
   UnsupportedFunctionalityError,
-} from '@ai-sdk/provider';
-import { MistralChatPrompt } from './mistral-chat-prompt';
+} from "@ai-sdk/provider";
+import { MistralChatPrompt } from "./mistral-chat-prompt";
 
 export function convertToMistralChatMessages(
-  prompt: LanguageModelV1Prompt,
+  prompt: LanguageModelV1Prompt
 ): MistralChatPrompt {
   const messages: MistralChatPrompt = [];
 
   for (const { role, content } of prompt) {
     switch (role) {
-      case 'system': {
-        messages.push({ role: 'system', content });
+      case "system": {
+        messages.push({ role: "system", content });
         break;
       }
 
-      case 'user': {
+      case "user": {
         messages.push({
-          role: 'user',
+          role: "user",
           content: content
-            .map(part => {
+            .map((part) => {
               switch (part.type) {
-                case 'text': {
+                case "text": {
                   return part.text;
                 }
-                case 'image': {
+                case "image": {
                   throw new UnsupportedFunctionalityError({
-                    functionality: 'image-part',
+                    functionality: "image-part",
                   });
                 }
               }
             })
-            .join(''),
+            .join(""),
         });
         break;
       }
 
-      case 'assistant': {
-        let text = '';
+      case "assistant": {
+        let text = "";
         const toolCalls: Array<{
           id: string;
-          type: 'function';
+          type: "function";
           function: { name: string; arguments: string };
         }> = [];
 
         for (const part of content) {
           switch (part.type) {
-            case 'text': {
+            case "text": {
               text += part.text;
               break;
             }
-            case 'tool-call': {
+            case "tool-call": {
               toolCalls.push({
                 id: part.toolCallId,
-                type: 'function',
+                type: "function",
                 function: {
                   name: part.toolName,
                   arguments: JSON.stringify(part.args),
@@ -70,17 +70,17 @@ export function convertToMistralChatMessages(
         }
 
         messages.push({
-          role: 'assistant',
+          role: "assistant",
           content: text,
           tool_calls: toolCalls.length > 0 ? toolCalls : undefined,
         });
 
         break;
       }
-      case 'tool': {
+      case "tool": {
         for (const toolResponse of content) {
           messages.push({
-            role: 'tool',
+            role: "tool",
             name: toolResponse.toolName,
             content: JSON.stringify(toolResponse.result),
             tool_call_id: toolResponse.toolCallId,

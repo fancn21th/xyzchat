@@ -1,10 +1,10 @@
-import { loadApiKey, withoutTrailingSlash } from '@ai-sdk/provider-utils';
-import { MistralChatLanguageModel } from './mistral-chat-language-model';
+import { loadApiKey, withoutTrailingSlash } from "@ai-sdk/provider-utils";
+import { MistralChatLanguageModel } from "./mistral-chat-language-model";
 import {
   MistralChatModelId,
   MistralChatSettings,
-} from './mistral-chat-settings';
-import { MistralProviderSettings } from './mistral-provider';
+} from "./mistral-chat-settings";
+import { MistralProviderSettings } from "./mistral-provider";
 
 /**
  * @deprecated Use `createMistral` instead.
@@ -25,7 +25,7 @@ export class Mistral {
   constructor(options: MistralProviderSettings = {}) {
     this.baseURL =
       withoutTrailingSlash(options.baseURL ?? options.baseUrl) ??
-      'https://api.mistral.ai/v1';
+      "https://api.mistral.ai/v1";
 
     this.apiKey = options.apiKey;
     this.headers = options.headers;
@@ -37,8 +37,8 @@ export class Mistral {
       headers: () => ({
         Authorization: `Bearer ${loadApiKey({
           apiKey: this.apiKey,
-          environmentVariableName: 'MISTRAL_API_KEY',
-          description: 'Mistral',
+          environmentVariableName: "MISTRAL_API_KEY",
+          description: "Mistral",
         })}`,
         ...this.headers,
       }),
@@ -47,7 +47,7 @@ export class Mistral {
 
   chat(modelId: MistralChatModelId, settings: MistralChatSettings = {}) {
     return new MistralChatLanguageModel(modelId, settings, {
-      provider: 'mistral.chat',
+      provider: "mistral.chat",
       ...this.baseConfig,
     });
   }
