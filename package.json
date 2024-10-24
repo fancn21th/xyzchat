@@ -10,9 +10,11 @@
     "mock": "turbo mock",
     "pub": "./deploy.sh",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "clean": "turbo clean"
+    "clean": "turbo clean",
+    "release": "pnpm run build && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "2.27.9",
     "prettier": "^3.2.5",
     "turbo": "2.0.6"
   },
