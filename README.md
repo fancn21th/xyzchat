@@ -109,6 +109,7 @@ pnpm dev      # start mobile app
 ├── docs                            # docs
 ├── package.json
 ├── packages
+│   ├── blah                        # AI SDK custom provider
 │   └── core                        # core ui components
 ├── pnpm-lock.yaml
 ├── pnpm-workspace.yaml
