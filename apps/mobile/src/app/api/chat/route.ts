@@ -1,10 +1,13 @@
 import { streamText, convertToCoreMessages } from "ai";
-import { createAzure } from "@ai-sdk/azure";
+// import { createAzure } from "@ai-sdk/azure";
+import { createMistral } from "@ai-sdk/blah";
 
-const openai = createAzure({
-  resourceName: process.env.AZURE_OPENAI_RESOURCE_NAME, // Azure resource name
-  apiKey: process.env.AZURE_OPENAI_API_KEY,
-});
+// const openai = createAzure({
+//   resourceName: process.env.AZURE_OPENAI_RESOURCE_NAME, // Azure resource name
+//   apiKey: process.env.AZURE_OPENAI_API_KEY,
+// });
+
+const openai = createMistral({});
 
 export async function POST(request: Request) {
   const { messages } = await request.json();

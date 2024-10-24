@@ -8,10 +8,11 @@ import {
   FetchFunction,
   ParseResult,
   combineHeaders,
-  createEventSourceResponseHandler,
+  // createEventSourceResponseHandler,
   createJsonResponseHandler,
   postJsonToApi,
 } from "@ai-sdk/provider-utils";
+import { createEventSourceResponseHandler } from "./createEventSourceResponseHandler";
 import { z } from "zod";
 import { convertToMistralChatMessages } from "./convert-to-mistral-chat-messages";
 import { mapMistralFinishReason } from "./map-mistral-finish-reason";
@@ -210,8 +211,10 @@ export class MistralChatLanguageModel implements LanguageModelV1 {
     const { args, warnings } = this.getArgs(options);
 
     const { responseHeaders, value: response } = await postJsonToApi({
-      url: `${this.config.baseURL}/chat/completions`,
-      headers: combineHeaders(this.config.headers(), options.headers),
+      // url: `${this.config.baseURL}/chat/completions`,
+      // headers: combineHeaders(this.config.headers(), options.headers),
+      url: `http://localhost:4321/mock/chat/completions`,
+      headers: combineHeaders({}, options.headers),
       body: {
         ...args,
         stream: true,
