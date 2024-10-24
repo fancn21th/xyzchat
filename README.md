@@ -29,7 +29,7 @@ Nevertheless, you can still follow along if you are willing to learn.
 
 ## screenshot
 
-![screenshot](./assets/screencapture-1024.png)
+<img src="./assets/screencapture-1024.png" alt="Description" width="148" />
 
 ## How to setup
 
