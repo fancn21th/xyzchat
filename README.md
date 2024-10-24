@@ -27,6 +27,10 @@ Nevertheless, you can still follow along if you are willing to learn.
 
   Even it seems over-engineering, but I find engineer tend to have a good interface design unconsciously.
 
+## screenshot
+
+![screenshot](./assets/screencapture-1024.png)
+
 ## How to setup
 
 > This is a monorepo project driven by turbo
