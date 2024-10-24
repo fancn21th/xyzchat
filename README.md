@@ -16,13 +16,19 @@ pnpm build
 
 ## How to dev
 
-- build components
+- components
 
 ```bash
 pnpm dev:component
 ```
 
-- build mobile app
+- mobile app
+
+```bash
+pnpm build    # build the core & blah projects
+pnpm mock     # start mock server
+pnpm dev      # start mobile app
+```
 
 ## 项目目标
 
