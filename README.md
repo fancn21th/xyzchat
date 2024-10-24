@@ -1,5 +1,32 @@
 # xyzchat 项目
 
+## Prerequisites
+
+You better have solid understanding of the following technologies:
+
+- [React](https://reactjs.org/)
+
+You should also have a basic understanding of the following technologies:
+
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Turbo](https://turbo.hotwired.dev/)
+- [Storybook](https://storybook.js.org/)
+- [Radix UI](https://radix-ui.com/)
+- [Shadcn UI](https://ui.shadcn.com/)
+- [AI SDK](https://sdk.vercel.ai/)
+
+Nevertheless, you can still follow along if you are willing to learn.
+
+- Firstly you would find the biz logic in mobile app only has 100 lines of code.
+
+  This is because the details are hidden in the core components as well as blah project.
+
+- Secondly you would find component development is separated from the mobile app.
+
+  Even it seems over-engineering, but I find engineer tend to have a good interface design unconsciously.
+
 ## How to setup
 
 > This is a monorepo project driven by turbo
@@ -16,13 +43,19 @@ pnpm build
 
 ## How to dev
 
-- build components
+- components
 
 ```bash
 pnpm dev:component
 ```
 
-- build mobile app
+- mobile app
+
+```bash
+pnpm build    # build the core & blah projects
+pnpm mock     # start mock server
+pnpm dev      # start mobile app
+```
 
 ## 项目目标
 
