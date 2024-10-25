@@ -19,17 +19,17 @@ You should also have a basic understanding of the following technologies:
 
 Nevertheless, you can still follow along if you are willing to learn.
 
-- Firstly you would find the biz logic in mobile app only has 100 lines of code.
+- Firstly you would find the biz logic in mobile app only has less than 100 lines of code [chat/page.tsx](./apps/mobile/src/app/(chat)/page.tsx).
 
   This is because the details are hidden in the core components as well as blah project.
 
-- Secondly you would find component development is separated from the mobile app.
+- Secondly you would find component development is separated from the mobile app development.
 
-  Even it seems over-engineering, but I find engineer tend to have a good interface design unconsciously.
+  Even it seems over-engineering, but I find engineer tend to have a good interface design unconsciously otherwise it will be pain in the a** that those components are hard to integrate.
 
 ## screenshot
 
-<img src="./assets/screencapture-1024.png" alt="Description" width="148" />
+<img src="./assets/screencapture-1024.png" alt="Description" width="200" />
 
 ## How to setup
 
