@@ -49,17 +49,17 @@ pnpm build
 
 - for ui components & design system
 
-```bash
-pnpm dev:component
-```
+  ```bash
+  pnpm dev:component
+  ```
 
 - for mobile app
 
-```bash
-pnpm dev
-```
+  ```bash
+  pnpm dev
+  ```
 
-open [http://localhost:3000](http://localhost:3000)
+  open [http://localhost:3000](http://localhost:3000)
 
 ## 项目目标
 
