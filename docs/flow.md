@@ -6,6 +6,8 @@
 
 - [Like drawing a circle](./flow.circle.md)
 
+- [设计思想](./design-principles.md)
+
 ## v0.1.0
 
 > done
