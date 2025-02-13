@@ -4,7 +4,8 @@
   "scripts": {
     "build": "turbo build",
     "build:sb": "turbo build:sb",
-    "dev": "turbo dev",
+    "dev": "npm-run-all --serial build --parallel dev:app mock",
+    "dev:app": "turbo dev",
     "dev:component": "turbo dev:component",
     "lint": "turbo lint",
     "mock": "turbo mock",
@@ -15,6 +16,7 @@
   },
   "devDependencies": {
     "@changesets/cli": "2.27.9",
+    "npm-run-all": "4.1.5",
     "prettier": "^3.2.5",
     "turbo": "2.0.6"
   },

@@ -47,19 +47,19 @@ pnpm build
 
 ## How to dev
 
-- components
+- for ui components & design system
 
 ```bash
 pnpm dev:component
 ```
 
-- mobile app
+- for mobile app
 
 ```bash
-pnpm build    # build the core & blah projects
-pnpm mock     # start mock server
-pnpm dev      # start mobile app
+pnpm dev
 ```
+
+open [http://localhost:3000](http://localhost:3000)
 
 ## 项目目标
 
@@ -120,9 +120,9 @@ pnpm dev      # start mobile app
 └── turbo.json
 ```
 
-## 工作流
+## 计划 / 里程碑
 
-整个项目的需求是如何推进的, 类似于里程碑, 参考 [flow](./docs/flow.md)
+参考 [flow](./docs/flow.md)
 
 ## 改进项目
 
